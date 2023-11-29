@@ -1,0 +1,3 @@
+build-essential
+libgirepository1.0-dev
+libpython3.8-dev

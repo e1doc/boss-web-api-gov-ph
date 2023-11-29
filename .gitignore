@@ -1,0 +1,4 @@
+*.pyc
+.env
+env/
+deploy-to-heroku.sh

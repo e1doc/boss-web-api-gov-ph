@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "db_bacoor2"
+      MYSQL_USER: "bacoor"
+      MYSQL_PASSWORD: "bacoor"
+      MYSQL_ROOT_PASSWORD: "bacoor"
+  web:
+    build: .
+    command: bash -c "cd boss-api && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - "./api:/opt/app/boss-api/api"
+      - "./staff:/opt/app/boss-api/staff"
+      - "./mainsite:/opt/app/boss-api/mainsite"

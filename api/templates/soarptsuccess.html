@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>Hello Mr/Ms {{ name }},</div>
+      <div style="margin-top: 40px; margin-left: 40px">
+        <div style="margin-bottom: 20px">
+          This is to inform you that we’ve successfully received your online
+          payment for:
+        </div>
+        <div style="margin-bottom: 10px">
+          <strong>TD Number: {{ td_no }}</strong>
+        </div>
+        <div style="margin-bottom: 10px">
+          <strong>Bill Reference #: {{ reference_number }}</strong>
+        </div>
+        <div style="margin-bottom: 10px">
+          <strong>Total Amount: PHP {{total_amount}}</strong>
+        </div>
+        <div style="margin-bottom: 10px">
+          <strong>Transaction ID: {{ transaction_id }}</strong>
+        </div>
+        <div>
+          To check the successful posting of your payment, kindly login to your
+          account at boss.bacoor.gov.ph and go <br />
+          to Transactions > Payment Transactions
+        </div>
+      </div>
+      <div style="margin-top: 40px">
+        Thank you! <br />
+        City Government of Bacoor
+      </div>
+      <div style="margin-top: 30px">
+        This is an auto-generated email. Please do not reply.
+      </div>
+    </div>
+  </body>
+</html>
